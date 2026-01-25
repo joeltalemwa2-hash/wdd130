@@ -1,62 +1,89 @@
 header {
-    background-color: #7fff00;    /* chartreuse background */
-    color: #0000ff;    /* blue text */
-    padding: 10px 0;    /* 10px top/bottom, 0 left/right */
-    text-align: center;    /* center the text */
-    font-size: 1.5rem;    /*larger text (relative to default) */
+  background-color: #7fff00;
+  /* chartreuse background */
+  color: #0000ff;
+  /* blue text */
+  padding: 10px 0;
+  /* 10px top/bottom, 0 left/right */
+  text-align: center;
+  /* center the text */
+  font-size: 1.5rem;
+  /*larger text (relative to default) */
 }
 
 body {
-    font-family: Arial, sans-serif; /* sans-serif font */
-    line-height: 1.6;                 /* space between lines */
+  font-family: Arial, sans-serif;
+  /* sans-serif font */
+  line-height: 1.6;
+  /* space between lines */
 }
 
 main {
-  width: 400px;       /* limit width of content */
-  margin: 0 auto;     /* center main on page */
+  width: 400px;
+  /* limit width of content */
+  margin: 0 auto;
+  /* center main on page */
 }
+
 h1 {
   margin: 10px;
   text-align: center;
 }
 
 h2 {
-  border-bottom: 1px solid #555; /* underline for H2 */
+  border-bottom: 1px solid #555;
+  /* underline for H2 */
   margin-bottom: 10px;
 }
+
 img {
-  width: 100%;                  /* fill container width */
-  height: auto;                 /* keep aspect ratio */
-  box-shadow: 0 0 30px rgba(0,0,0,0.4); /* shadow effect */
+  width: 100%;
+  /* fill container width */
+  height: auto;
+  /* keep aspect ratio */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  /* shadow effect */
 }
+
 section {
   margin: 10px;
-  border: 1px solid rgba(0,0,0,0.1); /* faint border */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* faint border */
   padding: 10px;
-  background-color: rgba(0,0,255,0.05); /* light blue background */
-  font-size: 0.9rem; /* slightly smaller text */
+  background-color: rgba(0, 0, 255, 0.05);
+  /* light blue background */
+  font-size: 0.9rem;
+  /* slightly smaller text */
 }
+
 section p {
   margin: 10px;
 }
+
 ul {
-  margin: 10px 20px 0; /* top | left/right | bottom */
+  margin: 10px 20px 0;
+  /* top | left/right | bottom */
 }
+
 footer {
   background-color: #333;
   color: #fff;
   padding: 10px 0;
   text-align: center;
-  font-size: 0.9rem; /* smaller text than header */
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* include padding/border in width/height */
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* include padding/border in width/height */
+  font-size: 0.9rem;
+  /* smaller text than header */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* include padding/border in width/height */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* include padding/border in width/height */
+}
