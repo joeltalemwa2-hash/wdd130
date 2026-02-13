@@ -222,6 +222,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    max-width: 400px;
 }
 
 .contact-form label {
@@ -253,7 +254,7 @@ fieldset label {
 
 .newsletter {
     display: grid;
-    align-items: start;
+    align-items: right;
     gap: 0.5rem;
     font-weight: normal;
 }
