@@ -114,18 +114,8 @@ article {
     margin-left: 12px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-}
-
 .socialmedia a {
     text-decoration: none;
-}
-
-.socialmedia img {
-    width: 32px;
-    margin: 0 6px;
 }
 
 /* ===== HISTORY LAYOUT ===== */
@@ -164,6 +154,7 @@ footer {
 
 /* ===== FOOTER LAYOUT ===== */
 footer {
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -178,6 +169,7 @@ footer {
 
 .socialmedia img {
     width: 28px;
+    margin: 0 6px;
 }
 
 .site-header {
@@ -196,11 +188,6 @@ footer {
     margin-left: 0.5rem;
 }
 
-.contact-info {
-    text-align: center;
-    margin: 2rem 0;
-}
-
 .map iframe {
     width: 100%;
     height: 300px;
@@ -213,10 +200,7 @@ footer {
         repeat(3, 1fr);
     gap: 2rem;
     text-align: center;
-}
-
-.employee-grid img {
-    width: 100px;
+    margin-top: 1.5rem;
 }
 
 /* Contact Page Layout */
@@ -227,7 +211,7 @@ footer {
 }
 
 .contact-grid {
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     max-width: 900px;
@@ -292,13 +276,6 @@ fieldset label {
     margin: 3rem auto;
     max-width: 900px;
     text-align: center;
-}
-
-.employee-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 1.5rem;
 }
 
 .employee-grid img {
