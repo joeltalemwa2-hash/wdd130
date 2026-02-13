@@ -46,16 +46,19 @@
 
         <fieldset>
           <legend>Message Purpose</legend>
-          <label><input type="radio" name="purpose"> General Inquiry</label>
-          <label><input type="radio" name="purpose"> Reservation Question</label>
-          <label><input type="radio" name="purpose"> Website Suggestion</label>
+          <label><input type="radio" id="general inquiry" name="purpose" value="general"> General
+            Inquiry</label>
+          <label><input type="radio" id="reservation questions" name="purpose" value="reservation">
+            Reservation Question</label>
+          <label><input type="radio" id="website suggestion" name="purpose"> Website
+            Suggestion</label>
         </fieldset>
 
         <label>Message
           <textarea placeholder="Type here"></textarea>
         </label>
 
-        <label class="newsletter">
+        <label for="subscribe" class="checkbox">
           <input type="checkbox" id="subscribe" name="newsletter">
           Please Subscribe me to the monthly newsletter
         </label>
@@ -63,20 +66,21 @@
       </form>
     </section>
 
+    <!--EMPLOYEES-->
     <section class="employees">
       <h2>We Are Here to Serve You</h2>
       <div class="employee-grid">
         <figure>
-          <img src="images/employee1.jpg" alt="Employee profile">
-          <figcaption>Employee Profile</figcaption>
+          <img src="images/manager.jpg" alt="Employee profile">
+          <figcaption>James-Manager</figcaption>
         </figure>
         <figure>
-          <img src="images/employee2.jpg" alt="Employee profile">
-          <figcaption>Employee Profile</figcaption>
+          <img src="images/lead.jpg" alt="Employee profile">
+          <figcaption>Racheal-Lead guide</figcaption>
         </figure>
         <figure>
-          <img src="images/employee3.jpg" alt="Employee profile">
-          <figcaption>Employee Profile</figcaption>
+          <img src="images/safety.jpg" alt="Employee profile">
+          <figcaption>Joseph-Safety Officer</figcaption>
         </figure>
       </div>
     </section>
