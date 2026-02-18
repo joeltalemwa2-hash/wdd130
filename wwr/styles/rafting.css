@@ -254,7 +254,7 @@ fieldset label {
 
 .newsletter {
     display: grid;
-    align-items: right;
+    align-items: end;
     gap: 0.5rem;
     font-weight: normal;
 }
