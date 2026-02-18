@@ -398,3 +398,30 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+.book-now {
+    background-color: #e6f7fb;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.book-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.book-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: #004e64;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #0077a6;
+}
