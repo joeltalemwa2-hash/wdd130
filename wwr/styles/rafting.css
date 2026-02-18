@@ -1,7 +1,7 @@
 :root {
     --primary-color: #1b4965;
     --secondary-color: #cae9ff;
-    --accent1-color: #0b132b;
+    --accent1-color: #4ac931;
 
     --heading-font: Arial, Helvetica, sans-serif;
     --body-font: Verdana, Geneva, sans-serif;
@@ -282,4 +282,119 @@ fieldset label {
 .employee-grid img {
     width: 150px;
     border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(58, 228, 24, 0.459)
+}
+
+header img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero h1 {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem 2rem;
+}
+
+.newsletter,
+.cta {
+    padding: 2rem;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #00a5cf;
+    color: white;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.grid-content img {
+    width: 100%;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.trip-grid img {
+    width: 100%;
+}
+
+.trip-table {
+    padding: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #004e64;
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
