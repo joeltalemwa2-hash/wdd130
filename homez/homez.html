@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homez Community Development Initiative - Site Plan</title>
+
+<style>
+/* =========================
+   COLOR PALETTE
+   =========================
+   Primary Blue: #4A90C2
+   Dark Blue: #1F4E79
+   Light Blue: #DCEAF7
+   Gold Accent: #D4A017
+   White: #FFFFFF
+   Dark Gray: #333333
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    color:#333;
+    background:#f8f9fb;
+}
+
+/* Header */
+header{
+    background:#1F4E79;
+    color:white;
+    text-align:center;
+    padding:2rem 1rem;
+}
+
+header h1{
+    font-size:2rem;
+}
+
+header p{
+    margin-top:.5rem;
+    font-style:italic;
+}
+
+/* Navigation */
+nav{
+    background:#4A90C2;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav li{
+    margin:0;
+}
+
+nav a{
+    display:block;
+    padding:15px 20px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#1F4E79;
+}
+
+/* Main */
+main{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+section{
+    background:white;
+    margin-bottom:20px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+h2{
+    color:#1F4E79;
+    margin-bottom:15px;
+    border-bottom:3px solid #D4A017;
+    padding-bottom:8px;
+}
+
+h3{
+    color:#4A90C2;
+    margin:15px 0;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+/* Color Palette Box */
+.palette{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+}
+
+.color{
+    height:120px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.primary{
+    background:#4A90C2;
+    color:white;
+}
+
+.dark{
+    background:#1F4E79;
+    color:white;
+}
+
+.light{
+    background:#DCEAF7;
+}
+
+.gold{
+    background:#D4A017;
+    color:white;
+}
+
+/* Wireframes */
+.wireframe{
+    background:#f1f1f1;
+    border:2px solid #ccc;
+    padding:15px;
+    margin-top:15px;
+}
+
+.box{
+    border:2px dashed #777;
+    padding:15px;
+    margin:10px 0;
+    text-align:center;
+}
+
+/* Desktop Layout Example */
+.desktop-layout{
+    display:grid;
+    grid-template-columns:1fr 3fr;
+    gap:15px;
+}
+
+/* Footer */
+footer{
+    background:#1F4E79;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Tablet */
+@media (min-width:768px){
+
+    header h1{
+        font-size:2.5rem;
+    }
+
+    .tablet-layout{
+        display:grid;
+        grid-template-columns:1fr 2fr;
+        gap:15px;
+    }
+}
+
+/* Desktop */
+@media (min-width:1024px){
+
+    header h1{
+        font-size:3rem;
+    }
+
+    nav ul{
+        justify-content:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>HOMEZ COMMUNITY DEVELOPMENT INITIATIVE</h1>
+    <p>"Building Hope, Changing Lives"</p>
+    <p>Masaka City, Uganda</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#audience">Audience</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#wireframes">Wireframes</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section id="overview">
+    <h2>Site Purpose</h2>
+
+    <p>
+        The Homez Community Development Initiative website will serve as an
+        information and outreach platform for the organization. It will
+        provide details about the vision, mission, objectives, membership,
+        leadership structure, community projects, donations, and volunteer
+        opportunities.
+    </p>
+</section>
+
+<section id="audience">
+    <h2>Target Audience</h2>
+
+    <ul>
+        <li>Community members</li>
+        <li>Volunteers</li>
+        <li>Donors and sponsors</li>
+        <li>Government agencies</li>
+        <li>NGOs and development partners</li>
+        <li>Families seeking support services</li>
+        <li>Students and beneficiaries</li>
+    </ul>
+</section>
+
+<section id="colors">
+    <h2>Color Scheme</h2>
+
+    <div class="palette">
+
+        <div class="color primary">
+            Primary Blue<br>#4A90C2
+        </div>
+
+        <div class="color dark">
+            Dark Blue<br>#1F4E79
+        </div>
+
+        <div class="color light">
+            Light Blue<br>#DCEAF7
+        </div>
+
+        <div class="color gold">
+            Gold Accent<br>#D4A017
+        </div>
+
+    </div>
+
+    <h3>Color Usage</h3>
+
+    <ul>
+        <li><strong>Dark Blue:</strong> Header, footer, headings.</li>
+        <li><strong>Primary Blue:</strong> Navigation and buttons.</li>
+        <li><strong>Gold:</strong> Highlights and call-to-action elements.</li>
+        <li><strong>Light Blue:</strong> Background sections.</li>
+    </ul>
+</section>
+
+<section id="content">
+    <h2>Website Content Structure</h2>
+
+    <h3>Home Page</h3>
+    <ul>
+        <li>Hero Banner</li>
+        <li>Organization Introduction</li>
+        <li>Vision & Mission</li>
+        <li>Quick Links</li>
+        <li>Call to Donate or Volunteer</li>
+    </ul>
+
+    <h3>About Us</h3>
+    <ul>
+        <li>Organization Background</li>
+        <li>Constitution Summary</li>
+        <li>Location: Masaka City, Uganda</li>
+    </ul>
+
+    <h3>Vision</h3>
+    <p>
+        A community where every family has access to education,
+        health information, and economic opportunity.
+    </p>
+
+    <h3>Mission</h3>
+    <p>
+        To empower vulnerable families and children through education
+        support, HIV/AIDS awareness, and community development programs.
+    </p>
+
+    <h3>Objectives</h3>
+    <ul>
+        <li>Support vulnerable children with school fees and scholastic materials.</li>
+        <li>Promote HIV/AIDS awareness and counseling.</li>
+        <li>Conduct community outreach and aid programs.</li>
+        <li>Support income-generating activities.</li>
+        <li>Partner with NGOs, government bodies and well-wishers.</li>
+    </ul>
+
+    <h3>Leadership</h3>
+    <ul>
+        <li>Chairperson</li>
+        <li>Vice Chairperson</li>
+        <li>Secretary</li>
+        <li>Treasurer</li>
+        <li>Mobilizer</li>
+    </ul>
+
+    <h3>Membership</h3>
+    <ul>
+        <li>Open to individuals aged 18 years and above.</li>
+        <li>Members uphold integrity and organization values.</li>
+        <li>Membership may be terminated for misconduct.</li>
+    </ul>
+
+    <h3>Contact Page</h3>
+    <ul>
+        <li>Organization Address</li>
+        <li>Email</li>
+        <li>Phone Number</li>
+        <li>Volunteer Registration Form</li>
+    </ul>
+
+</section>
+
+<section id="wireframes">
+    <h2>Responsive Wireframes</h2>
+
+    <h3>Mobile Wireframe</h3>
+
+    <div class="wireframe">
+        <div class="box">LOGO</div>
+        <div class="box">NAVIGATION MENU</div>
+        <div class="box">HERO IMAGE</div>
+        <div class="box">MISSION</div>
+        <div class="box">OBJECTIVES</div>
+        <div class="box">VOLUNTEER / DONATE BUTTON</div>
+        <div class="box">FOOTER</div>
+    </div>
+
+    <h3>Tablet Wireframe</h3>
+
+    <div class="wireframe tablet-layout">
+        <div>
+            <div class="box">LOGO</div>
+            <div class="box">MENU</div>
+        </div>
+
+        <div>
+            <div class="box">HERO SECTION</div>
+            <div class="box">MISSION</div>
+            <div class="box">OBJECTIVES</div>
+            <div class="box">PROGRAMS</div>
+        </div>
+    </div>
+
+    <h3>Desktop Wireframe</h3>
+
+    <div class="wireframe desktop-layout">
+
+        <div>
+            <div class="box">LOGO</div>
+            <div class="box">SIDE NAVIGATION</div>
+        </div>
+
+        <div>
+            <div class="box">FULL WIDTH HERO BANNER</div>
+            <div class="box">VISION + MISSION</div>
+            <div class="box">OBJECTIVES</div>
+            <div class="box">LEADERSHIP TEAM</div>
+            <div class="box">DONATE / VOLUNTEER</div>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+    <h2>Technology Stack</h2>
+
+    <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Responsive Design</li>
+        <li>Mobile-First Development</li>
+    </ul>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Homez Community Development Initiative</p>
+    <p>Building Hope, Changing Lives</p>
+</footer>
+
+</body>
+</html>
