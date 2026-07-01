@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnUP — Education Without Limits</title>
+<meta name="description" content="LearnUP is Uganda's offline-first learning platform for S1–S6 students. Download your subjects once, then learn anywhere — even with zero internet.">
+<meta name="theme-color" content="#14231F">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="status-banner" id="statusBanner" role="status" aria-live="polite"></div>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary">
+    <a href="#top" class="brand">
+      <span class="brand-mark">📚</span> LearnUP
+    </a>
+    <ul class="nav-links">
+      <li><a href="#subjects">Subjects</a></li>
+      <li><a href="#materials">Materials</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Switch to light mode" title="Toggle theme">☀️</button>
+      <a href="#pricing" class="btn btn-ghost btn-sm nav-log-in">Log In</a>
+      <a href="#pricing" class="btn btn-primary btn-sm">Start Free</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  <ul class="mobile-nav container" id="mobileNav">
+    <li><a href="#subjects">Subjects</a></li>
+    <li><a href="#materials">Materials</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+  </ul>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="hero-badge"><span class="dot"></span> Works 100% offline — no internet needed</span>
+        <h1>
+          Learning that never stops<br>
+          — even <span class="chalk-underline">offline<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 Q 50 20, 100 12 T 198 10" fill="none" stroke="var(--clay)" stroke-width="4" stroke-linecap="round"/></svg></span>
+        </h1>
+        <p class="lede">LearnUP is Uganda's first offline-first learning platform for secondary students. Download your subjects, learn anywhere — even with zero internet.</p>
+        <div class="hero-ctas">
+          <a href="#pricing" class="btn btn-primary">Download App Free</a>
+          <a href="#features" class="btn btn-ghost">How It Works</a>
+        </div>
+        <ul class="hero-trust">
+          <li>8,000+ active learners</li>
+          <li>Uganda curriculum aligned</li>
+          <li>S1 – S6 covered</li>
+        </ul>
+      </div>
+
+      <div class="mock-wrap">
+        <div class="mock-blob" aria-hidden="true"></div>
+        <div class="mock-card reveal">
+          <div class="mock-top">
+            <h3>My Subjects</h3>
+            <span class="mock-status">Offline</span>
+          </div>
+          <div class="mock-subject">
+            <div class="mock-subject-top"><span>📐 Mathematics — S4</span></div>
+            <div class="mock-progress-track"><div class="mock-progress-fill" data-fill="68"></div></div>
+            <div class="mock-progress-label">68% complete · 14 lessons remaining</div>
+          </div>
+          <div class="mock-lesson-list">
+            <div class="mock-lesson">
+              <span class="mock-lesson-left"><span class="mock-lesson-num">1</span> Quadratic Equations</span>
+              <span class="mock-lesson-time">25 min</span>
+              <span class="mock-state done">✅</span>
+            </div>
+            <div class="mock-lesson">
+              <span class="mock-lesson-left"><span class="mock-lesson-num">2</span> Surds &amp; Indices</span>
+              <span class="mock-lesson-time">30 min</span>
+              <span class="mock-state">▶️</span>
+            </div>
+            <div class="mock-lesson">
+              <span class="mock-lesson-left"><span class="mock-lesson-num">3</span> Logarithms</span>
+              <span class="mock-lesson-time">28 min</span>
+              <span class="mock-state locked">🔒</span>
+            </div>
+          </div>
+          <div class="mock-quiz">
+            <div><span class="tag">⚡ Quick Quiz</span>Algebra Revision</div>
+            <span>Start →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE RIBBON DIVIDER -->
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon-inner">
+      <span class="ribbon-label"><span class="pulse"></span>Download once</span>
+      <svg viewBox="0 0 600 28" preserveAspectRatio="none">
+        <line x1="4" y1="14" x2="596" y2="14" stroke="currentColor" stroke-opacity="0.25" stroke-width="2"/>
+        <line class="ribbon-flow" x1="4" y1="14" x2="596" y2="14" stroke="var(--gold)" stroke-width="2" stroke-dasharray="1 11" stroke-linecap="round"/>
+      </svg>
+      <span class="ribbon-label">Learn anywhere ✓</span>
+    </div>
+  </div>
+
+  <!-- CURRICULUM -->
+  <section class="section" id="subjects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Curriculum</span>
+        <h2>Every subject. S1 through S6.</h2>
+        <p>All content is aligned to the Uganda National Examination Board (UNEB) curriculum and downloadable for offline use.</p>
+      </div>
+      <div class="subject-grid">
+        <div class="subject-card reveal"><span class="subject-emoji">📐</span><h3>Mathematics</h3><span class="count">240 lessons</span></div>
+        <div class="subject-card reveal"><span class="subject-emoji">🔬</span><h3>Physics</h3><span class="count">198 lessons</span></div>
+        <div class="subject-card reveal"><span class="subject-emoji">⚗️</span><h3>Chemistry</h3><span class="count">210 lessons</span></div>
+        <div class="subject-card reveal"><span class="subject-emoji">🧬</span><h3>Biology</h3><span class="count">225 lessons</span></div>
+        <div class="subject-card reveal"><span class="subject-emoji">📖</span><h3>English</h3><span class="count">180 lessons</span></div>
+        <div class="subject-card reveal"><span class="subject-emoji">🗺️</span><h3>Geography</h3><span class="count">165 lessons</span></div>
+        <div class="subject-card reveal"><span class="subject-emoji">📜</span><h3>History</h3><span class="count">172 lessons</span></div>
+        <div class="subject-card reveal"><span class="subject-emoji">💻</span><h3>ICT</h3><span class="count">140 lessons</span></div>
+        <div class="subject-card reveal"><span class="subject-emoji">🏦</span><h3>Economics</h3><span class="count">155 lessons</span></div>
+        <div class="subject-card reveal"><span class="subject-emoji">🕌</span><h3>CRE / IRE</h3><span class="count">120 lessons</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARNING MATERIALS (reads data/materials.json) -->
+  <section class="section" id="materials">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Learning Materials</span>
+        <h2>Videos, notes &amp; past papers — all in one shelf</h2>
+        <p>Everything here is pulled from <code>data/materials.json</code>. Add a resource to that file and it appears here automatically — no other file to touch.</p>
+      </div>
+
+      <div class="materials-toolbar reveal">
+        <div class="filter-group" id="subjectFilters" role="group" aria-label="Filter by subject">
+          <button class="filter-chip is-active" data-filter-subject="all">All Subjects</button>
+        </div>
+        <div class="filter-group" id="typeFilters" role="group" aria-label="Filter by type">
+          <button class="filter-chip is-active" data-filter-type="all">All Types</button>
+          <button class="filter-chip" data-filter-type="video">🎥 Video</button>
+          <button class="filter-chip" data-filter-type="notes">📝 Notes</button>
+          <button class="filter-chip" data-filter-type="past-paper">🧾 Past Papers</button>
+          <button class="filter-chip" data-filter-type="audio">🎧 Audio</button>
+        </div>
+      </div>
+
+      <div class="materials-grid" id="materialsGrid" aria-live="polite">
+        <p class="materials-status">Loading learning materials…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES + SYNC PANEL -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Why LearnUP</span>
+        <h2>Built for Uganda's real conditions</h2>
+      </div>
+      <div class="features-layout">
+        <div class="feature-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon">📡</div>
+            <h3>100% Offline Learning</h3>
+            <p>Download entire subjects once over Wi-Fi or mobile data. Then learn anywhere — no connectivity needed. Perfect for rural Uganda.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">⚡</div>
+            <h3>Smart Sync</h3>
+            <p>When you do get online, LearnUP syncs your progress, downloads new content, and backs up your notes automatically.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">🧠</div>
+            <h3>Adaptive Quizzes</h3>
+            <p>Practice questions adapt to your level. The more you learn, the smarter the quizzes get — just like a personal tutor.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">📊</div>
+            <h3>Progress Tracking</h3>
+            <p>See exactly how far you've come in each subject. Parents and teachers can access student progress reports.</p>
+          </div>
+          <div class="feature-card reveal" style="grid-column: 1 / -1;">
+            <div class="feature-icon">🔋</div>
+            <h3>Battery Optimized</h3>
+            <p>Engineered to use minimal battery — so students can learn for hours on a single charge.</p>
+          </div>
+        </div>
+
+        <div class="sync-panel reveal">
+          <h3>📡 Offline Sync Status</h3>
+          <div class="sync-row"><span class="label">Last Synced</span><span>Today, 7:32 AM ✅</span></div>
+          <div class="sync-row"><span class="label">Downloaded Content</span><span>3.2 GB stored 📥</span></div>
+          <div class="sync-row"><span class="label">Downloaded Subjects</span><span></span></div>
+          <div class="chip-row">
+            <span class="chip">📐 Maths</span>
+            <span class="chip">🔬 Physics</span>
+            <span class="chip">⚗️ Chemistry</span>
+            <span class="chip">📖 English</span>
+          </div>
+          <h3 style="margin-top:.5rem;">Weekly Progress</h3>
+          <div class="progress-list">
+            <div class="progress-item">
+              <div class="top"><span>Maths</span><span class="pct">68%</span></div>
+              <div class="progress-track"><div class="progress-fill" data-fill="68"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="top"><span>Physics</span><span class="pct">45%</span></div>
+              <div class="progress-track"><div class="progress-fill" data-fill="45"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="top"><span>Chemistry</span><span class="pct">82%</span></div>
+              <div class="progress-track"><div class="progress-fill" data-fill="82"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="top"><span>English</span><span class="pct">91%</span></div>
+              <div class="progress-track"><div class="progress-fill" data-fill="91"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-bar">
+    <div class="container stats-grid">
+      <div class="stat reveal"><div class="num" data-count="8000" data-suffix="+">0</div><div class="lbl">Active Learners</div></div>
+      <div class="stat reveal"><div class="num" data-count="1600" data-suffix="+">0</div><div class="lbl">Lessons Available</div></div>
+      <div class="stat reveal"><div class="num" data-count="92" data-suffix="%">0</div><div class="lbl">Pass Rate Improvement</div></div>
+      <div class="stat reveal"><div class="num" data-count="40" data-suffix="+">0</div><div class="lbl">Schools Partnered</div></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Student Stories</span>
+        <h2>Changing lives one lesson at a time</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"I live in Lira and our school has no internet. With LearnUP, I downloaded Maths and Physics in town and studied all month. I passed my mock with distinctions."</p>
+          <div class="testi-person">
+            <div class="avatar">AO</div>
+            <div><div class="who">Amara Okello</div><div class="role">S4 Student, Lira</div></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"As a teacher, I can see exactly which topics my students are struggling with. The progress dashboard is incredibly useful for targeted revision."</p>
+          <div class="testi-person">
+            <div class="avatar">MK</div>
+            <div><div class="who">Mr. Moses Kato</div><div class="role">Mathematics Teacher, Masaka</div></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"My daughter improved from a D to a B in Chemistry in one term. The adaptive quizzes helped her understand concepts she was missing. Worth every shilling."</p>
+          <div class="testi-person">
+            <div class="avatar">GN</div>
+            <div><div class="who">Grace Namukwaya</div><div class="role">Parent, Wakiso</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Simple Pricing</span>
+        <h2>Affordable for every student</h2>
+        <p>No hidden fees. Cancel anytime. Schools get special group rates.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card reveal">
+          <h3>Free</h3>
+          <div class="price-amount">UGX 0</div>
+          <div class="price-sub">Forever free</div>
+          <ul class="price-list">
+            <li><span class="mark">✓</span> 2 subjects</li>
+            <li><span class="mark">✓</span> Basic offline access</li>
+            <li><span class="mark">✓</span> 20 quizzes/month</li>
+            <li class="no"><span class="mark">✗</span> Progress reports</li>
+            <li class="no"><span class="mark">✗</span> Past papers</li>
+          </ul>
+          <a href="#" class="btn btn-ghost btn-block">Download Free</a>
+        </div>
+        <div class="price-card featured reveal">
+          <span class="price-badge">Most Popular</span>
+          <h3>Student</h3>
+          <div class="price-amount">8,000<span> UGX / term</span></div>
+          <div class="price-sub">Per school term</div>
+          <ul class="price-list">
+            <li><span class="mark">✓</span> All 10 subjects</li>
+            <li><span class="mark">✓</span> Full offline access</li>
+            <li><span class="mark">✓</span> Unlimited quizzes</li>
+            <li><span class="mark">✓</span> Progress reports</li>
+            <li><span class="mark">✓</span> Past UNEB papers</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block">Get Student Plan</a>
+        </div>
+        <div class="price-card reveal">
+          <h3>School</h3>
+          <div class="price-amount">150,000<span> UGX / term</span></div>
+          <div class="price-sub">Up to 100 students</div>
+          <ul class="price-list">
+            <li><span class="mark">✓</span> Everything in Student</li>
+            <li><span class="mark">✓</span> Teacher dashboard</li>
+            <li><span class="mark">✓</span> Bulk student accounts</li>
+            <li><span class="mark">✓</span> Class analytics</li>
+            <li><span class="mark">✓</span> Priority support</li>
+          </ul>
+          <a href="#" class="btn btn-ghost btn-block">Contact School Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section">
+    <div class="final-cta reveal">
+      <h2>Start Learning Today — Free</h2>
+      <p>Join 8,000+ students already studying smarter with LearnUP. No internet required after download.</p>
+      <div class="store-row">
+        <a href="#" class="btn btn-primary">🍎 App Store</a>
+        <a href="#" class="btn btn-primary">▶️ Google Play</a>
+        <a href="#" class="btn btn-ghost">🏫 For Schools</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="brand"><span class="brand-mark">📚</span> LearnUP</a>
+        <p>A product by <strong>TALJOE Studios</strong>. Built for Uganda's students, aligned to the UNEB curriculum, and designed to work with zero internet.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Schools</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">© 2026 LearnUP. Built for Uganda's students by TALJOE Studios, Masaka.</div>
+  </div>
+</footer>
+
+<div class="install-toast" id="installToast">
+  <div class="txt"><strong>Install LearnUP</strong><span>Add it to your home screen — works offline once installed.</span></div>
+  <button class="btn btn-primary btn-sm" id="installBtn">Install</button>
+  <button class="close-toast" id="closeToast" aria-label="Dismiss">✕</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
