@@ -1,0 +1,163 @@
+{
+  "_readme": "Add or edit entries below to change what appears in the Learning Materials section. Each object is one resource. No other file needs to change — index.html reads this automatically via app.js. See the 'field guide' at the bottom of this file for what each key means.",
+
+  "materials": [
+    {
+      "id": "mat-001",
+      "title": "Quadratic Equations — Full Walkthrough",
+      "subject": "Mathematics",
+      "level": "S4",
+      "type": "video",
+      "source": "LearnUP Studio",
+      "url": "https://example.com/materials/maths-quadratics.mp4",
+      "sizeMB": 84,
+      "dateAdded": "2026-05-12",
+      "offline": true
+    },
+    {
+      "id": "mat-002",
+      "title": "UNEB 2024 Physics Paper 1 (with marking guide)",
+      "subject": "Physics",
+      "level": "S6",
+      "type": "past-paper",
+      "source": "UNEB Archive",
+      "url": "https://example.com/materials/physics-uneb-2024-p1.pdf",
+      "sizeMB": 6,
+      "dateAdded": "2026-04-02",
+      "offline": true
+    },
+    {
+      "id": "mat-003",
+      "title": "Organic Chemistry Reaction Map",
+      "subject": "Chemistry",
+      "level": "S5",
+      "type": "notes",
+      "source": "Mr. Kato's Class Notes",
+      "url": "https://example.com/materials/chem-organic-map.pdf",
+      "sizeMB": 3,
+      "dateAdded": "2026-05-20",
+      "offline": false
+    },
+    {
+      "id": "mat-004",
+      "title": "Cell Division: Mitosis vs Meiosis",
+      "subject": "Biology",
+      "level": "S4",
+      "type": "video",
+      "source": "LearnUP Studio",
+      "url": "https://example.com/materials/bio-cell-division.mp4",
+      "sizeMB": 112,
+      "dateAdded": "2026-03-18",
+      "offline": true
+    },
+    {
+      "id": "mat-005",
+      "title": "Essay Writing: Structure & Transitions",
+      "subject": "English",
+      "level": "S3",
+      "type": "notes",
+      "source": "LearnUP Studio",
+      "url": "https://example.com/materials/eng-essay-structure.pdf",
+      "sizeMB": 2,
+      "dateAdded": "2026-02-27",
+      "offline": true
+    },
+    {
+      "id": "mat-006",
+      "title": "Map Reading & Grid References",
+      "subject": "Geography",
+      "level": "S2",
+      "type": "notes",
+      "source": "LearnUP Studio",
+      "url": "https://example.com/materials/geo-map-reading.pdf",
+      "sizeMB": 5,
+      "dateAdded": "2026-01-30",
+      "offline": false
+    },
+    {
+      "id": "mat-007",
+      "title": "The Scramble for Africa — Audio Lecture",
+      "subject": "History",
+      "level": "S3",
+      "type": "audio",
+      "source": "Radio Uganda Education",
+      "url": "https://example.com/materials/hist-scramble-africa.mp3",
+      "sizeMB": 38,
+      "dateAdded": "2026-05-05",
+      "offline": true
+    },
+    {
+      "id": "mat-008",
+      "title": "Intro to Spreadsheets: Formulas & Charts",
+      "subject": "ICT",
+      "level": "S2",
+      "type": "video",
+      "source": "LearnUP Studio",
+      "url": "https://example.com/materials/ict-spreadsheets.mp4",
+      "sizeMB": 96,
+      "dateAdded": "2026-04-14",
+      "offline": false
+    },
+    {
+      "id": "mat-009",
+      "title": "Supply & Demand: Real Uganda Market Examples",
+      "subject": "Economics",
+      "level": "S5",
+      "type": "notes",
+      "source": "LearnUP Studio",
+      "url": "https://example.com/materials/econ-supply-demand.pdf",
+      "sizeMB": 4,
+      "dateAdded": "2026-03-01",
+      "offline": true
+    },
+    {
+      "id": "mat-010",
+      "title": "UNEB 2023 Mathematics Paper 2 (with marking guide)",
+      "subject": "Mathematics",
+      "level": "S6",
+      "type": "past-paper",
+      "source": "UNEB Archive",
+      "url": "https://example.com/materials/maths-uneb-2023-p2.pdf",
+      "sizeMB": 7,
+      "dateAdded": "2026-02-10",
+      "offline": true
+    },
+    {
+      "id": "mat-011",
+      "title": "World Religions: A Comparative Overview",
+      "subject": "CRE / IRE",
+      "level": "S1",
+      "type": "notes",
+      "source": "LearnUP Studio",
+      "url": "https://example.com/materials/cre-comparative-overview.pdf",
+      "sizeMB": 3,
+      "dateAdded": "2026-01-15",
+      "offline": false
+    },
+    {
+      "id": "mat-012",
+      "title": "Titration Techniques — Lab Demonstration",
+      "subject": "Chemistry",
+      "level": "S4",
+      "type": "video",
+      "source": "LearnUP Studio",
+      "url": "https://example.com/materials/chem-titration-lab.mp4",
+      "sizeMB": 130,
+      "dateAdded": "2026-05-28",
+      "offline": false
+    }
+  ],
+
+  "_field_guide": {
+    "id": "Unique string, no spaces. Just increment mat-013, mat-014, ...",
+    "title": "What shows as the material's name",
+    "subject": "Must match a subject name used elsewhere on the site (e.g. Mathematics, Physics, Chemistry, Biology, English, Geography, History, ICT, Economics, CRE / IRE) so subject filtering works",
+    "level": "S1–S6",
+    "type": "One of: video, pdf, notes, past-paper, audio — controls the icon shown",
+    "source": "Where it came from — displayed as a small credit line",
+    "url": "Direct link to the file online (or a relative path like data/files/yourfile.pdf if you upload the actual file into this folder)",
+    "sizeMB": "Approximate file size in megabytes, shown to help students on limited data",
+    "dateAdded": "YYYY-MM-DD",
+    "offline": "true if this file should be pre-cached for offline access, false if it is fetched fresh online only"
+  }
+}

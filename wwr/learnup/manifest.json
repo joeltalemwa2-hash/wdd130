@@ -1,0 +1,33 @@
+{
+  "name": "LearnUP — Education Without Limits",
+  "short_name": "LearnUP",
+  "description": "Uganda's offline-first learning platform for S1–S6 students. Download your subjects, learn anywhere.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#14231F",
+  "theme_color": "#14231F",
+  "lang": "en-UG",
+  "categories": ["education"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
