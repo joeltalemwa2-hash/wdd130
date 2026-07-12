@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terry — your reel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="marquee">
+    <div class="marquee__inner">
+      <div class="marquee__brand">
+        <span class="marquee__bulb"></span>
+        <h1>TERRY</h1>
+        <span class="marquee__bulb"></span>
+      </div>
+      <p class="marquee__tag">your reel, your rules</p>
+      <div class="marquee__search">
+        <input id="searchInput" type="text" placeholder="Find something in the booth…" autocomplete="off" />
+      </div>
+    </div>
+  </header>
+
+  <main id="grid" class="grid" aria-live="polite">
+    <!-- movie ticket cards injected here -->
+  </main>
+
+  <template id="ticket-template">
+    <article class="ticket">
+      <div class="ticket__poster">
+        <img class="ticket__img" alt="" />
+        <div class="ticket__fallback"><span></span></div>
+        <button class="ticket__play" type="button" aria-label="Play">▶</button>
+      </div>
+      <div class="ticket__stub">
+        <div class="ticket__stub-main">
+          <h2 class="ticket__title"></h2>
+          <p class="ticket__meta"></p>
+        </div>
+        <a class="ticket__download" download aria-label="Download">⭳</a>
+      </div>
+    </article>
+  </template>
+
+  <div id="empty" class="empty hidden">
+    <p class="empty__eyebrow">house lights up</p>
+    <h2>No films in the booth yet</h2>
+    <p>Drop video files into the <code>data</code> folder next to <code>server.js</code>, then refresh.<br/>
+    Add a same-named image (e.g. <code>inception.mp4</code> + <code>inception.jpg</code>) for a poster.</p>
+  </div>
+
+  <div id="player" class="player hidden" role="dialog" aria-modal="true">
+    <div class="player__backdrop"></div>
+    <div class="player__frame">
+      <button id="playerClose" class="player__close" aria-label="Close">✕</button>
+      <video id="playerVideo" controls playsinline></video>
+      <div class="player__info">
+        <h2 id="playerTitle"></h2>
+        <a id="playerDownload" class="btn btn--gold" download>Download ⭳</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

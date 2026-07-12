@@ -1,0 +1,270 @@
+{
+  "trainers": [
+    {
+      "id": 1,
+      "name": "Amara Nakato",
+      "specialty": "Weight Loss & Cardio",
+      "certification": "NASM Certified Personal Trainer",
+      "experience": 7,
+      "rating": 4.9,
+      "sessions": 320,
+      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80",
+      "bio": "Amara specializes in transformative weight loss programs tailored for the Kampala climate and lifestyle. Her high-energy cardio sessions blend traditional African movements with modern fitness science.",
+      "available": true,
+      "price": 45000
+    },
+    {
+      "id": 2,
+      "name": "David Ssekandi",
+      "specialty": "Strength & Powerlifting",
+      "certification": "CSCS — Certified Strength & Conditioning Specialist",
+      "experience": 10,
+      "rating": 4.8,
+      "sessions": 510,
+      "image": "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&q=80",
+      "bio": "David is Kampala's leading powerlifting coach with a decade of competitive experience. He builds structured periodized programs that break plateaus and build real functional strength.",
+      "available": true,
+      "price": 55000
+    },
+    {
+      "id": 3,
+      "name": "Grace Apio",
+      "specialty": "Yoga & Mindfulness",
+      "certification": "RYT-500 Registered Yoga Teacher",
+      "experience": 6,
+      "rating": 5.0,
+      "sessions": 280,
+      "image": "https://media.istockphoto.com/id/1339701353/photo/black-female-athlete-doing-stretching-exercises-while-warming-up-with-group-of-women-at.webp?a=1&b=1&s=612x612&w=0&k=20&c=Ce_TzlntFr_1u5AYuO7prEn0wjmcLBVMYmi5rpY5ow8=",
+      "bio": "Grace integrates Eastern mindfulness traditions with Ugandan wellness philosophy. Her yoga sessions leave clients feeling restored, aligned, and mentally clear.",
+      "available": true,
+      "price": 40000
+    },
+    {
+      "id": 4,
+      "name": "Moses Kiggundu",
+      "specialty": "Sports Performance",
+      "certification": "NSCA-CPT, Sports Nutrition Diploma",
+      "experience": 8,
+      "rating": 4.7,
+      "sessions": 395,
+      "image": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400&q=80",
+      "bio": "Moses works with Kampala's competitive athletes — from marathon runners to football players. He designs performance programs that sharpen speed, agility, and endurance.",
+      "available": false,
+      "price": 60000
+    },
+    {
+      "id": 5,
+      "name": "Patience Nanteza",
+      "specialty": "Pre & Postnatal Fitness",
+      "certification": "ACE Certified, Pre/Postnatal Specialist",
+      "experience": 5,
+      "rating": 4.9,
+      "sessions": 195,
+      "image": "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&q=80",
+      "bio": "Patience creates safe, empowering fitness journeys for mothers at every stage. Her compassionate approach has helped hundreds of Kampala women reclaim their strength and confidence.",
+      "available": true,
+      "price": 42000
+    },
+    {
+      "id": 6,
+      "name": "Ronald Byaruhanga",
+      "specialty": "HIIT & Functional Training",
+      "certification": "ACE-CPT, TRX Suspension Training",
+      "experience": 4,
+      "rating": 4.6,
+      "sessions": 210,
+      "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D",
+      "bio": "Ronald's HIIT sessions are legendary at the hub — short, brutal, effective. He uses bodyweight and functional tools to create workouts that fit busy Kampala schedules.",
+      "available": true,
+      "price": 38000
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Kampala Dawn Run",
+      "date": "2026-07-05",
+      "time": "6:00 AM",
+      "location": "Kololo Airstrip",
+      "category": "Running",
+      "spots": 150,
+      "spotsLeft": 42,
+      "description": "Start your weekend with a refreshing 5K or 10K run at sunrise across Kololo Airstrip.",
+      "fee": 10000
+    },
+    {
+      "id": 2,
+      "title": "Outdoor HIIT Bootcamp",
+      "date": "2026-07-12",
+      "time": "7:30 AM",
+      "location": "Centenary Park",
+      "category": "Group Fitness",
+      "spots": 40,
+      "spotsLeft": 12,
+      "description": "A high-energy group bootcamp session with resistance bands, ladders, and interval cardio.",
+      "fee": 15000
+    },
+    {
+      "id": 3,
+      "title": "Nutrition & Meal Prep Workshop",
+      "date": "2026-07-19",
+      "time": "10:00 AM",
+      "location": "KFH Main Studio",
+      "category": "Workshop",
+      "spots": 25,
+      "spotsLeft": 8,
+      "description": "Learn to build balanced Ugandan meals that fuel performance. Includes cooking demo and take-home guide.",
+      "fee": 20000
+    },
+    {
+      "id": 4,
+      "title": "Yoga in the Garden",
+      "date": "2026-07-26",
+      "time": "8:00 AM",
+      "location": "Botanical Gardens, Entebbe",
+      "category": "Yoga",
+      "spots": 30,
+      "spotsLeft": 19,
+      "description": "A restorative outdoor yoga session surrounded by nature. All levels welcome. Mats provided.",
+      "fee": 12000
+    },
+    {
+      "id": 5,
+      "title": "Strength Challenge Cup",
+      "date": "2026-08-02",
+      "time": "9:00 AM",
+      "location": "KFH Main Studio",
+      "category": "Competition",
+      "spots": 60,
+      "spotsLeft": 31,
+      "description": "Compete across deadlift, squat, and bench press categories. Prizes for top performers in each weight class.",
+      "fee": 25000
+    },
+    {
+      "id": 6,
+      "title": "Women's Wellness Day",
+      "date": "2026-08-09",
+      "time": "9:00 AM",
+      "location": "KFH Main Studio",
+      "category": "Workshop",
+      "spots": 50,
+      "spotsLeft": 22,
+      "description": "A full-day experience with yoga, nutrition coaching, fitness assessments, and wellness talks.",
+      "fee": 35000
+    }
+  ],
+  "programs": [
+    {
+      "id": 1,
+      "name": "Beginner's Kickstart",
+      "level": "Beginner",
+      "duration": "4 Weeks",
+      "sessions": 12,
+      "category": "Full Body",
+      "description": "Designed for those just starting their fitness journey. Builds foundational strength and endurance with gentle progressions.",
+      "includes": ["Movement assessments", "Nutrition basics guide", "3 sessions/week", "Progress tracking"]
+    },
+    {
+      "id": 2,
+      "name": "Fat Burn Accelerator",
+      "level": "Intermediate",
+      "duration": "6 Weeks",
+      "sessions": 18,
+      "category": "Cardio & Weight Loss",
+      "description": "A calorie-crushing program combining HIIT, steady-state cardio, and circuit training to maximise fat loss.",
+      "includes": ["Body composition analysis", "HIIT + cardio mix", "Meal plan template", "Weekly check-ins"]
+    },
+    {
+      "id": 3,
+      "name": "Strength Builder Pro",
+      "level": "Intermediate",
+      "duration": "8 Weeks",
+      "sessions": 24,
+      "category": "Strength",
+      "description": "A progressive overload programme focused on compound lifts to build serious, lasting strength.",
+      "includes": ["1RM testing", "Periodised training plan", "Supplement guidance", "4 sessions/week"]
+    },
+    {
+      "id": 4,
+      "name": "Elite Athlete Program",
+      "level": "Advanced",
+      "duration": "12 Weeks",
+      "sessions": 36,
+      "category": "Performance",
+      "description": "Reserved for competitive athletes who demand peak output. Combines sport-specific training, recovery protocols, and performance tracking.",
+      "includes": ["VO2 max assessment", "Sports nutrition plan", "5 sessions/week", "Video analysis"]
+    },
+    {
+      "id": 5,
+      "name": "Mind & Body Reset",
+      "level": "All Levels",
+      "duration": "4 Weeks",
+      "sessions": 8,
+      "category": "Yoga & Wellness",
+      "description": "A holistic reset integrating yoga, breathwork, and mindful movement for stress relief and body balance.",
+      "includes": ["Flexibility assessment", "Guided meditations", "2 sessions/week", "Wellness journal"]
+    },
+    {
+      "id": 6,
+      "name": "Post-Natal Restore",
+      "level": "Beginner",
+      "duration": "6 Weeks",
+      "sessions": 12,
+      "category": "Postnatal Fitness",
+      "description": "A gentle, evidence-based programme to help new mothers rebuild core strength and restore body confidence safely.",
+      "includes": ["Pelvic floor assessment", "Core restore plan", "Baby-friendly schedule", "2 sessions/week"]
+    }
+  ],
+  "nutrition": [
+    {
+      "id": 1,
+      "tip": "Start your day with a protein-rich breakfast",
+      "detail": "Eating 25–30g of protein at breakfast helps control hunger hormones and supports muscle repair after morning workouts.",
+      "icon": "🥚",
+      "category": "Meal Timing"
+    },
+    {
+      "id": 2,
+      "tip": "Hydrate before you feel thirsty",
+      "detail": "In Kampala's heat, dehydration sets in quickly. Aim for 3–4 litres of water daily, adding electrolytes after intense sessions.",
+      "icon": "💧",
+      "category": "Hydration"
+    },
+    {
+      "id": 3,
+      "tip": "Lean on local superfoods",
+      "detail": "Groundnuts, sweet potatoes, matoke, and leafy greens are affordable, nutritious, and perfectly suited to an active lifestyle.",
+      "icon": "🥜",
+      "category": "Local Foods"
+    }
+  ],
+  "memberships": [
+    {
+      "id": 1,
+      "name": "Starter",
+      "price": 80000,
+      "period": "month",
+      "color": "#6c757d",
+      "features": ["Gym access (Mon–Fri)", "Cardio equipment", "Locker room access", "1 group class/week"],
+      "highlighted": false
+    },
+    {
+      "id": 2,
+      "name": "Pro",
+      "price": 150000,
+      "period": "month",
+      "color": "#0F4C81",
+      "features": ["Unlimited gym access", "All group classes", "1 PT session/month", "Nutrition consultation", "Body composition scan"],
+      "highlighted": true
+    },
+    {
+      "id": 3,
+      "name": "Elite",
+      "price": 280000,
+      "period": "month",
+      "color": "#2ECC71",
+      "features": ["Everything in Pro", "4 PT sessions/month", "Personalised meal plan", "Priority booking", "Guest passes (2/month)"],
+      "highlighted": false
+    }
+  ]
+}

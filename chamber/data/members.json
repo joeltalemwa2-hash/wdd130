@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "Nile Craft Coffee Roasters",
+    "category": "Food & Beverage",
+    "tier": "gold",
+    "address": "Plot 14, Kampala Road",
+    "phone": "+256 700 112 233",
+    "email": "hello@nilecraftcoffee.ug",
+    "website": "https://example.com",
+    "description": "Small-batch roastery sourcing beans from Elgon and Rwenzori growers, supplying cafés across the city."
+  },
+  {
+    "id": 2,
+    "name": "Buganda Textiles Cooperative",
+    "category": "Manufacturing",
+    "tier": "silver",
+    "address": "Nakawa Industrial Area",
+    "phone": "+256 700 445 566",
+    "email": "info@bugandatextiles.ug",
+    "website": "https://example.com",
+    "description": "Cooperative of 40 tailors producing barkcloth-inspired textiles for export and local retail."
+  },
+  {
+    "id": 3,
+    "name": "Lakeview Logistics Ltd",
+    "category": "Transport & Logistics",
+    "tier": "gold",
+    "address": "Ggaba Road, Kampala",
+    "phone": "+256 701 998 213",
+    "email": "dispatch@lakeviewlogistics.co.ug",
+    "website": "https://example.com",
+    "description": "Regional freight and warehousing serving Lake Victoria trade routes into Kenya and Rwanda."
+  },
+  {
+    "id": 4,
+    "name": "Kira Digital Studio",
+    "category": "Technology",
+    "tier": "bronze",
+    "address": "Bukoto, Kampala",
+    "phone": "+256 702 334 771",
+    "email": "team@kiradigital.io",
+    "website": "https://example.com",
+    "description": "Product design and software studio building fintech and agri-tech tools for East Africa."
+  },
+  {
+    "id": 5,
+    "name": "Mengo Health Partners",
+    "category": "Healthcare",
+    "tier": "silver",
+    "address": "Old Mubende Road",
+    "phone": "+256 703 221 998",
+    "email": "care@mengohealth.org",
+    "website": "https://example.com",
+    "description": "Community clinic network offering primary care and maternal health services."
+  },
+  {
+    "id": 6,
+    "name": "Ssese Timber & Joinery",
+    "category": "Construction",
+    "tier": "bronze",
+    "address": "Kyengera, Wakiso",
+    "phone": "+256 704 556 812",
+    "email": "orders@ssesetimber.ug",
+    "website": "https://example.com",
+    "description": "Sustainably harvested timber, custom joinery, and shop-fitting for commercial clients."
+  },
+  {
+    "id": 7,
+    "name": "Kampala Youth Enterprise Trust",
+    "category": "Nonprofit",
+    "tier": "np",
+    "address": "Kamwokya, Kampala",
+    "phone": "+256 705 667 341",
+    "email": "programs@kyet.org",
+    "website": "https://example.com",
+    "description": "Trains young entrepreneurs and links graduates to chamber members for apprenticeships."
+  },
+  {
+    "id": 8,
+    "name": "Rwenzori Fresh Produce",
+    "category": "Agriculture",
+    "tier": "gold",
+    "address": "Nakasero Market",
+    "phone": "+256 706 883 120",
+    "email": "sales@rwenzorifresh.ug",
+    "website": "https://example.com",
+    "description": "Aggregates and distributes fresh produce from Rwenzori-region smallholder farms."
+  },
+  {
+    "id": 9,
+    "name": "Equator Legal Chambers",
+    "category": "Professional Services",
+    "tier": "silver",
+    "address": "Nakasero Hill",
+    "phone": "+256 707 900 145",
+    "email": "reception@equatorlegal.co.ug",
+    "website": "https://example.com",
+    "description": "Corporate and commercial law practice supporting SMEs with contracts and compliance."
+  },
+  {
+    "id": 10,
+    "name": "Bweyogerere Solar Works",
+    "category": "Energy",
+    "tier": "bronze",
+    "address": "Bweyogerere Industrial Park",
+    "phone": "+256 708 220 934",
+    "email": "info@bweyogererensolar.ug",
+    "website": "https://example.com",
+    "description": "Installs and maintains solar power systems for factories and retail premises."
+  },
+  {
+    "id": 11,
+    "name": "Katonga Microfinance Bank",
+    "category": "Finance",
+    "tier": "gold",
+    "address": "William Street, Kampala",
+    "phone": "+256 709 556 018",
+    "email": "support@katongamfb.ug",
+    "website": "https://example.com",
+    "description": "Savings, loans, and business advisory services for micro and small enterprises."
+  },
+  {
+    "id": 12,
+    "name": "Pearl Events & Catering",
+    "category": "Hospitality",
+    "tier": "np",
+    "address": "Kololo, Kampala",
+    "phone": "+256 710 774 632",
+    "email": "bookings@pearlevents.ug",
+    "website": "https://example.com",
+    "description": "Full-service events and catering for chamber functions and private celebrations."
+  }
+]

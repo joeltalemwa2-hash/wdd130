@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workout Programs & Memberships | Kampala Fitness Hub</title>
+  <meta name="description" content="Explore structured workout programs for every fitness level at Kampala Fitness Hub — from beginner kickstart plans to elite athletic performance training." />
+  <meta name="author" content="Joel Talemwa" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Workout Programs & Memberships | Kampala Fitness Hub" />
+  <meta property="og:description" content="Find the perfect fitness program in Kampala. Beginner to advanced programs, HIIT, strength, yoga, and more." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80" />
+  <meta property="og:url" content="https://joeltalemwa2-hash.github.io/wdd231/final/programs.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" >
+
+  <link rel="stylesheet" href="styles/main.css" >
+  <link rel="stylesheet" href="styles/larger.css" >
+  
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Kampala Fitness Hub Home">
+        <div class="logo-icon" aria-hidden="true">💪</div>
+        <div class="logo-text">
+          Kampala Fitness Hub
+          <span class="logo-sub">Strength · Health · Community</span>
+        </div>
+      </a>
+      <div class="nav-controls">
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
+        <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <ul class="nav-menu" id="nav-menu" role="list" aria-hidden="true">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programs.html" aria-current="page">Programs</a></li>
+        <li><a href="trainers.html">Trainers</a></li>
+        <li><a href="index.html#contact">Join Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <h1 id="page-title">Workout Programs</h1>
+      <p>Science-backed programs designed for Kampala's fitness community — every level, every goal.</p>
+    </section>
+
+    <!-- Programs -->
+    <section class="section" aria-labelledby="programs-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Training Plans</span>
+          <h2 id="programs-heading">All Programs</h2>
+          <p>Filter by fitness level and find the program that's right for you right now.</p>
+        </div>
+
+        <!-- Level Personalisation -->
+        <div class="preference-bar" role="region" aria-label="Set your fitness level preference">
+          <span class="level-label">Set your level for personalised suggestions:</span>
+          <div class="level-buttons">
+            <button class="filter-btn level-select-btn" data-level="Beginner">🌱 Beginner</button>
+            <button class="filter-btn level-select-btn" data-level="Intermediate">🔥 Intermediate</button>
+            <button class="filter-btn level-select-btn" data-level="Advanced">⚡ Advanced</button>
+          </div>
+          <span id="level-badge" class="level-badge"></span>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-bar" role="group" aria-label="Filter programs by level">
+          <button class="filter-btn active" data-filter="All">All Levels</button>
+          <button class="filter-btn" data-filter="Beginner">🌱 Beginner</button>
+          <button class="filter-btn" data-filter="Intermediate">🔥 Intermediate</button>
+          <button class="filter-btn" data-filter="Advanced">⚡ Advanced</button>
+          <button class="filter-btn" data-filter="All Levels">✨ All Levels</button>
+        </div>
+
+        <div class="programs-grid" id="programs-grid">
+          <div class="loading-state"><div class="spinner"></div><p>Loading programmes…</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership -->
+    <section class="section bg-dark-section" id="membership" aria-labelledby="membership-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Flexible Pricing</span>
+          <h2 id="membership-heading">Membership Packages</h2>
+          <p>Affordable memberships that give you full access to our facility, classes, and expert team.</p>
+        </div>
+        <div class="membership-grid" id="memberships-grid">
+          <div class="loading-state"><div class="spinner"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Schedule -->
+    <section class="section" id="schedule" aria-labelledby="schedule-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Weekly Timetable</span>
+          <h2 id="schedule-heading">Training Schedule</h2>
+          <p>Group classes run throughout the week. Join any session as a member.</p>
+        </div>
+        <div class="table-wrapper">
+          <table class="schedule-table" aria-label="Weekly training schedule">
+            <thead>
+              <tr class="scheduled-header-row">
+                <th scope="col" class="schedule-th">Time</th>
+                <th scope="col" class="schedule-th">Monday</th>
+                <th scope="col" class="schedule-th">Wednesday</th>
+                <th scope="col" class="schedule-th">Friday</th>
+                <th scope="col" class="schedule-th">Saturday</th>
+              </tr>
+            </thead>
+            <tbody class="schedule-body">
+              <tr class="schedule-row">
+                <td class="schedule-time">6:00 AM</td>
+                <td class="schedule-cell">HIIT Bootcamp</td>
+                <td class="schedule-cell">Strength 101</td>
+                <td class="schedule-cell">HIIT Bootcamp</td>
+                <td class="schedule-cell">Outdoor Run</td>
+              </tr>
+              <tr class="schedule-row-alt">
+                <td class="schedule-time">8:00 AM</td>
+                <td class="schedule-cell">Yoga Flow</td>
+                <td class="schedule-cell">Yoga Flow</td>
+                <td class="schedule-cell">Yoga Flow</td>
+                <td class="schedule-cell">Full Body Circuit</td>
+              </tr>
+              <tr class="schedule-row-alt">
+                <td class="schedule-time">12:00 PM</td>
+                <td class="schedule-cell">Cardio Blast</td>
+                <td class="schedule-cell">Core & Abs</td>
+                <td class="schedule-cell">Cardio Blast</td>
+                <td class="schedule-cell">—</td>
+              </tr>
+              <tr class="schedule-row-alt">
+                <td class="schedule-time">5:30 PM</td>
+                <td class="schedule-cell">Power Lifting</td>
+                <td class="schedule-cell">Pilates</td>
+                <td class="schedule-cell">Power Lifting</td>
+                <td class="schedule-cell">—</td>
+              </tr>
+              <tr>
+                <td class="schedule-time">7:00 PM</td>
+                <td class="schedule-cell">Boxing Fitness</td>
+                <td class="schedule-cell">Boxing Fitness</td>
+                <td class="schedule-cell">Open Gym</td>
+                <td class="schedule-cell">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="section nutrition-bg" id="resources" aria-labelledby="resources-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow nutrition-eyebrow">Wellness Library</span>
+          <h2 id="resources-heading" class="nutrition-heading">Fitness Resources</h2>
+          <p class="nutrition-text">Free guides and tools to support your training journey.</p>
+        </div>
+        <div class="resources-grid">
+          <div class="tip-card">
+            <div class="tip-icon">📋</div>
+            <span class="tip-category">Guide</span>
+            <h3>Beginner's Gym Guide</h3>
+            <p>Everything you need to know before your first gym session — equipment, etiquette, and safety tips.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">🥗</div>
+            <span class="tip-category">Nutrition</span>
+            <h3>Ugandan Meal Plan Template</h3>
+            <p>A week of balanced meals built around affordable local foods like matoke, groundnuts, and leafy greens.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">😴</div>
+            <span class="tip-category">Recovery</span>
+            <h3>Recovery & Sleep Protocol</h3>
+            <p>Why rest days matter as much as training days, and how to optimise your recovery for better results.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">📈</div>
+            <span class="tip-category">Tracking</span>
+            <h3>Progress Tracking Sheet</h3>
+            <p>A simple, printable sheet to log your workouts, measurements, and weekly check-ins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-icon" aria-hidden="true">💪</div>
+        <p>Empowering Kampala's community through fitness, nutrition, and shared dedication to a healthier life.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="trainers.html">Trainers</a></li>
+          <li><a href="index.html#contact">Join Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="attributions.html">Attributions</a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener">Video Demo</a></li>
+          <li><a href="https://joeltalemwa2-hash.github.io/wdd231/" target="_blank" rel="noopener">WDD231 Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kampala Fitness Hub · Joel Talemwa</span>
+      <a href="attributions.html">Attributions</a>
+      <a href="https://www.youtube.com" target="_blank" rel="noopener">Video Demo</a>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <script type="module" src="scripts/programs.js"></script>
+</body>
+</html>

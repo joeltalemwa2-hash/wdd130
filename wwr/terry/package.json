@@ -1,0 +1,12 @@
+{
+  "name": "terry",
+  "version": "1.0.0",
+  "description": "Terry — your own private movie marquee. Drop videos in /data, watch or download from the browser.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
