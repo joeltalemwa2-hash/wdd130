@@ -2,45 +2,151 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joel Talemwa | WDD 130 Web Fundamentals</title>
+  <meta name="author" content="Joel Talemwa" />
+  <meta name="description"
+    content="Joel Talemwa's home page for WDD 130 Web Fundamentals at BYU-Idaho — a hand-built page showcasing HTML and CSS skills, with a look at Uganda, the Pearl of Africa." />
 
-    <meta name="description"
-      content="Joel Talemwa's home page for WDD 130 Web Fundamentals, showcasing HTML and CSS skills.">
-    <meta name="author" content="Joel Talemwa">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%23C79A3E' stroke-width='3'/%3E%3Ccircle cx='24' cy='24' r='3' fill='%23C79A3E'/%3E%3C/svg%3E" />
 
-    <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to My Home Page</h1>
-    </header>
 
-    <main>
-        <img src="images/joeltalemwa.jpeg" alt="Photo of Joel Talemwa">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <p>
-            My name is Joel Talemwa and this website is part of my WDD 130 Web
-            Fundamentals course at BYU-Idaho. This page demonstrates basic HTML
-            structure and CSS styling.
-        </p>
-    </main>
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#home">Joel <span>Talemwa</span></a>
 
-    <aside>
-        <h2>Uganda</h2>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
+        aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
 
-        <img src="images/uganda.jpg" alt="Scenery from Uganda">
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#uganda">Uganda</a></li>
+          <li><a href="wwr/index.html">Project</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <p>
-            Uganda is a country in East Africa known for its rich culture, wildlife,
-            and beautiful landscapes. It is often called the Pearl of Africa.
-        </p>
-    </aside>
+  <main id="main">
 
-    <footer>
-        <p>© 2026 | Joel Talemwa | Uganda</p>
-    </footer>
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+      <div class="hero-rings" aria-hidden="true"></div>
+
+      <div class="wrap hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span>WDD 130 &middot; Web
+            Fundamentals &middot; BYU&ndash;Idaho</p>
+          <h1>Joel Talemwa</h1>
+          <p class="hero-lede">Building clean, thoughtful web pages one course project at a time
+            &mdash; with a bit of Uganda in every line.</p>
+          <p class="hero-sub">This page is my home base for WDD 130: Web Fundamentals, where
+            I&rsquo;m learning to write HTML and CSS from the ground up.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#about">About me</a>
+            <a class="btn btn-ghost" href="#uganda">Visit Uganda ↓</a>
+          </div>
+        </div>
+
+        <div class="hero-portrait reveal">
+          <div class="portrait-frame">
+            <img src="images/joeltalemwa.jpeg" alt="Photo of Joel Talemwa" width="480" height="480"
+              loading="eager" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="about">
+      <div class="wrap">
+        <p class="eyebrow reveal"><span class="dot" aria-hidden="true"></span>About</p>
+        <h2 class="reveal">A student building from the ground up</h2>
+
+        <div class="about-grid reveal">
+          <p>My name is Joel Talemwa. I&rsquo;m currently taking WDD 130: Web Fundamentals at
+            BYU&ndash;Idaho, where this page serves as my first real project &mdash; a place to
+            practice semantic HTML, thoughtful CSS, and the small details that make a page feel
+            considered rather than just functional.</p>
+          <p>Every project on this site is built by hand, without frameworks, so I can understand
+            exactly how each piece works before reaching for anything more advanced. It&rsquo;s a
+            work in progress, the same way learning to build for the web always is.</p>
+        </div>
+
+        <dl class="facts reveal">
+          <div class="fact">
+            <dt>Course</dt>
+            <dd>WDD 130 &mdash; Web Fundamentals</dd>
+          </div>
+          <div class="fact">
+            <dt>Institution</dt>
+            <dd>BYU&ndash;Idaho</dd>
+          </div>
+          <div class="fact">
+            <dt>Focus</dt>
+            <dd>HTML &amp; CSS</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ UGANDA ============ -->
+    <section id="uganda" class="uganda">
+      <div class="uganda-media">
+        <img src="images/uganda.jpg" alt="Scenery from Uganda" loading="lazy" />
+      </div>
+
+      <div class="wrap uganda-inner">
+        <div class="uganda-card reveal">
+          <p class="eyebrow eyebrow-light"><span class="dot" aria-hidden="true"></span>The Pearl of
+            Africa</p>
+          <h2>Uganda</h2>
+          <p>Uganda is a country in East Africa known for its rich culture, wildlife, and landscape
+            &mdash; often called the Pearl of Africa, a name first given by Winston Churchill after
+            he was struck by its scenery. From the shores of Lake Victoria to the forests that
+            shelter mountain gorillas, it&rsquo;s a place built on color and life.</p>
+          <p class="coords">0&deg;19&prime; N, 32&deg;35&prime; E &mdash; Kampala, Uganda</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-word">Joel Talemwa</p>
+        <p class="footer-tagline">WDD 130 &middot; Web Fundamentals &middot; BYU&ndash;Idaho</p>
+      </div>
+      <div class="footer-meta">
+        <p class="footer-copy">&copy; 2026 Joel Talemwa &mdash; Uganda</p>
+        <a class="back-to-top" href="#home">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
