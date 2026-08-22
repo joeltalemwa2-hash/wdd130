@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Terry — your reel</title>
+<meta name="description" content="Terry — browse what's showing worldwide and play the films in your own booth." />
+
+<!-- Installable app (this is what turns Terry into an APK later) -->
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#0b0b0e" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Terry" />
+<link rel="icon" href="favicon.png" sizes="64x64" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://image.tmdb.org">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
 </head>
@@ -22,17 +35,61 @@
       <div class="marquee__search">
         <input id="searchInput" type="text" placeholder="Find something in the booth…" autocomplete="off" />
       </div>
+      <nav class="marquee__nav" id="nav" aria-label="Sections">
+        <button class="tab is-active" data-view="showing" type="button">Now showing</button>
+        <button class="tab" data-view="booth" type="button">My booth</button>
+        <button class="tab" data-view="list" type="button">My list</button>
+      </nav>
     </div>
   </header>
 
-  <main id="grid" class="grid" aria-live="polite">
-    <!-- movie ticket cards injected here -->
-  </main>
+  <!-- Featured title, pulled from what's trending this week -->
+  <section id="hero" class="hero hidden" aria-label="Featured film">
+    <div class="hero__art"><img id="heroImg" alt="" /></div>
+    <div class="hero__scrim"></div>
+    <div class="hero__body">
+      <p class="hero__eyebrow">now showing</p>
+      <h2 id="heroTitle"></h2>
+      <p id="heroMeta" class="hero__meta"></p>
+      <p id="heroBlurb" class="hero__blurb"></p>
+      <div class="hero__actions">
+        <button id="heroOpen" class="btn btn--gold" type="button">See details</button>
+        <button id="heroSave" class="btn btn--ghost" type="button">Add to my list</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TMDB key setup, shown only when there's no key and no server proxy -->
+  <section id="setup" class="setup hidden">
+    <p class="setup__eyebrow">projector not threaded</p>
+    <h2>Connect the catalogue</h2>
+    <p class="setup__text">
+      Terry pulls posters, cast, ratings and trailers from
+      <a href="https://www.themoviedb.org/signup" target="_blank" rel="noopener">TMDB</a>.
+      Create a free account, open <em>Settings → API</em>, and paste your API Read Access Token
+      (or v3 key) below. It is stored in this browser only.
+    </p>
+    <div class="setup__row">
+      <input id="keyInput" type="password" placeholder="TMDB key or read token" autocomplete="off" spellcheck="false" />
+      <button id="keySave" class="btn btn--gold" type="button">Connect</button>
+    </div>
+    <p id="keyError" class="setup__error hidden"></p>
+    <p class="setup__note">Prefer to keep the key private? Run <code>server.js</code> with <code>TMDB_API_KEY</code> set and the browser never touches it.</p>
+  </section>
+
+  <!-- Home: horizontal reels -->
+  <main id="rows" class="rows"></main>
+
+  <!-- Search results / booth / my list share this grid -->
+  <section id="gridWrap" class="grid-wrap hidden">
+    <p id="gridLabel" class="reel__eyebrow"></p>
+    <div id="grid" class="grid" aria-live="polite"></div>
+  </section>
 
   <template id="ticket-template">
     <article class="ticket">
       <div class="ticket__poster">
-        <img class="ticket__img" alt="" />
+        <img class="ticket__img" alt="" loading="lazy" />
         <div class="ticket__fallback"><span></span></div>
         <button class="ticket__play" type="button" aria-label="Play">▶</button>
       </div>
@@ -46,6 +103,16 @@
     </article>
   </template>
 
+  <template id="reel-template">
+    <section class="reel">
+      <div class="reel__head">
+        <p class="reel__eyebrow"></p>
+        <span class="reel__rule"></span>
+      </div>
+      <div class="reel__track"></div>
+    </section>
+  </template>
+
   <div id="empty" class="empty hidden">
     <p class="empty__eyebrow">house lights up</p>
     <h2>No films in the booth yet</h2>
@@ -53,6 +120,7 @@
     Add a same-named image (e.g. <code>inception.mp4</code> + <code>inception.jpg</code>) for a poster.</p>
   </div>
 
+  <!-- Player for files in your own booth -->
   <div id="player" class="player hidden" role="dialog" aria-modal="true">
     <div class="player__backdrop"></div>
     <div class="player__frame">
@@ -65,6 +133,37 @@
     </div>
   </div>
 
+  <!-- Detail sheet for catalogue titles -->
+  <div id="sheet" class="sheet hidden" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet__backdrop"></div>
+    <div class="sheet__frame">
+      <button id="sheetClose" class="player__close" aria-label="Close">✕</button>
+      <div class="sheet__art"><img id="sheetImg" alt="" /><div class="sheet__scrim"></div></div>
+      <div class="sheet__body">
+        <h2 id="sheetTitle"></h2>
+        <p id="sheetMeta" class="sheet__meta"></p>
+        <p id="sheetBlurb" class="sheet__blurb"></p>
+        <div id="sheetCast" class="sheet__cast"></div>
+        <div class="sheet__stub">
+          <div id="sheetWhere" class="sheet__where"></div>
+          <div class="sheet__actions">
+            <button id="sheetTrailer" class="btn btn--gold" type="button">Play trailer</button>
+            <button id="sheetBooth" class="btn btn--ghost hidden" type="button">Play from my booth</button>
+            <button id="sheetSave" class="btn btn--ghost" type="button">Add to my list</button>
+          </div>
+        </div>
+        <div id="sheetVideo" class="sheet__video hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Booth files are yours. Catalogue data and posters come from
+      <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a> —
+      Terry is not endorsed or certified by TMDB.</p>
+  </footer>
+
+  <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

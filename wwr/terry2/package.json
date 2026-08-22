@@ -1,10 +1,13 @@
 {
   "name": "terry",
-  "version": "1.0.0",
-  "description": "Terry — your own private movie marquee. Drop videos in /data, watch or download from the browser.",
+  "version": "2.0.0",
+  "description": "Terry — your own private movie marquee. Browse the world catalogue, play the files in your booth.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "dependencies": {
     "express": "^4.19.2"

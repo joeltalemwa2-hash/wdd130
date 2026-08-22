@@ -6,6 +6,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const DATA_DIR = path.join(__dirname, 'data');
 
+// TMDB credentials are optional. If you set one, the browser never sees it —
+// requests go through the /api/tmdb proxy below instead.
+// v3 key:  TMDB_API_KEY=abc123...
+// v4 token: TMDB_READ_TOKEN=eyJhbGciOi...
+const TMDB_API_KEY = process.env.TMDB_API_KEY || '';
+const TMDB_READ_TOKEN = process.env.TMDB_READ_TOKEN || '';
+const TMDB_BASE = 'https://api.themoviedb.org/3';
+const REGION = process.env.TMDB_REGION || 'UG';
+
 const VIDEO_EXT = ['.mp4', '.mkv', '.webm', '.mov', '.avi', '.m4v'];
 const IMAGE_EXT = ['.jpg', '.jpeg', '.png', '.webp'];
 
@@ -44,8 +53,60 @@ function getMovies() {
   }).sort((a, b) => new Date(b.addedAt) - new Date(a.addedAt));
 }
 
+// What can this deployment actually do? The front end asks first, then decides
+// whether to show the booth, the catalogue, or both.
+app.get('/api/status', (req, res) => {
+  res.json({
+    booth: true,
+    tmdbProxy: Boolean(TMDB_API_KEY || TMDB_READ_TOKEN),
+    region: REGION,
+  });
+});
+
 app.get('/api/movies', (req, res) => {
   res.json(getMovies());
+});
+
+// ---- TMDB proxy -----------------------------------------------------------
+// /api/tmdb/movie/popular?page=1  ->  https://api.themoviedb.org/3/movie/popular?page=1
+// Only GET, only whitelisted paths, key added server side.
+const TMDB_ALLOWED = [
+  /^\/trending\/movie\/(day|week)$/,
+  /^\/movie\/(popular|top_rated|now_playing|upcoming)$/,
+  /^\/movie\/\d+$/,
+  /^\/movie\/\d+\/(videos|credits|recommendations|similar|watch\/providers|images)$/,
+  /^\/search\/movie$/,
+  /^\/discover\/movie$/,
+  /^\/genre\/movie\/list$/,
+  /^\/configuration$/,
+];
+
+app.get('/api/tmdb/*', async (req, res) => {
+  if (!TMDB_API_KEY && !TMDB_READ_TOKEN) {
+    return res.status(501).json({ error: 'No TMDB credentials set on this server.' });
+  }
+
+  const subPath = '/' + req.params[0];
+  if (!TMDB_ALLOWED.some(rx => rx.test(subPath))) {
+    return res.status(400).json({ error: 'That TMDB path is not allowed.' });
+  }
+
+  const url = new URL(TMDB_BASE + subPath);
+  for (const [k, v] of Object.entries(req.query)) {
+    if (k !== 'api_key') url.searchParams.set(k, v);
+  }
+
+  const headers = { accept: 'application/json' };
+  if (TMDB_READ_TOKEN) headers.Authorization = `Bearer ${TMDB_READ_TOKEN}`;
+  else url.searchParams.set('api_key', TMDB_API_KEY);
+
+  try {
+    const upstream = await fetch(url, { headers });
+    const body = await upstream.text();
+    res.status(upstream.status).type('application/json').send(body);
+  } catch (err) {
+    res.status(502).json({ error: 'Could not reach TMDB.' });
+  }
 });
 
 app.get('/download/:file', (req, res) => {
@@ -63,6 +124,9 @@ app.get('/download/:file', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Terry is running → http://localhost:${PORT}`);
+  console.log(`Terry is running -> http://localhost:${PORT}`);
   console.log(`Drop video files into: ${DATA_DIR}`);
+  console.log(TMDB_API_KEY || TMDB_READ_TOKEN
+    ? 'TMDB proxy: on (key stays on the server)'
+    : 'TMDB proxy: off (set TMDB_API_KEY to turn it on)');
 });
