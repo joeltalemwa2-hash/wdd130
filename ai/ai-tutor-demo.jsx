@@ -25,6 +25,28 @@ function useFonts() {
   }, []);
 }
 
+function getStorage() {
+  if (window.storage) return window.storage;
+  return {
+    async get(key) {
+      try {
+        const value = window.localStorage.getItem(key);
+        return value ? { value } : null;
+      } catch (e) {
+        return null;
+      }
+    },
+    async set(key, value) {
+      try {
+        window.localStorage.setItem(key, value);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    },
+  };
+}
+
 async function askClaude(messages, system) {
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
@@ -157,7 +179,7 @@ function DigitalLibrary({ subject }) {
   useEffect(() => {
     (async () => {
       try {
-        const res = await window.storage.get(NOTES_KEY, false);
+        const res = await getStorage().get(NOTES_KEY, false);
         setNotes(res && res.value ? JSON.parse(res.value) : []);
       } catch (e) {
         setNotes([]);
@@ -167,7 +189,7 @@ function DigitalLibrary({ subject }) {
 
   const persist = async (next) => {
     setNotes(next);
-    try { await window.storage.set(NOTES_KEY, JSON.stringify(next), false); } catch (e) {}
+    try { await getStorage().set(NOTES_KEY, JSON.stringify(next), false); } catch (e) {}
   };
 
   const addNote = async () => {
@@ -722,7 +744,7 @@ export default function App() {
   useEffect(() => {
     (async () => {
       try {
-        const result = await window.storage.get(STUDENT_KEY, false);
+        const result = await getStorage().get(STUDENT_KEY, false);
         if (result && result.value) setStudentRaw(JSON.parse(result.value));
       } catch (e) {
         // no saved progress yet — defaults are fine
@@ -735,7 +757,7 @@ export default function App() {
   const setStudent = (updater) => {
     setStudentRaw((prev) => {
       const next = typeof updater === "function" ? updater(prev) : updater;
-      window.storage.set(STUDENT_KEY, JSON.stringify(next), false).catch(() => {});
+      getStorage().set(STUDENT_KEY, JSON.stringify(next), false).catch(() => {});
       return next;
     });
   };
